@@ -1,0 +1,27 @@
+Create a REST API that will provide the user with football player data, and which can also receive new football player data.
+
+Please pick your favorite two teams  (e.g. Juventus, Ajax) and select some players (e.g. Ronaldo, Onana, etc.) to be used in the assessment.
+
+You can use https://www.transfermarkt.com/ as a reference and/or source for what you would like to provide via the to be created REST API.
+
+
+For example:
+
+    Get single player data (name, height, age).
+    Update a single player.
+    Get all players from a team.
+    Add a new player to a team.
+    Remove a player from a team.
+
+
+How data is stored is fully up to you (e.g. file system, database, etc.), pick what you think is suitable for the assessment.
+
+A client does not have to be provided, calling the API via Postman is sufficient.
+
+
+The project should at least meet the following:
+    Written in C#.
+    Run out of the box on a Windows machine (e.g. application can be run from Visual Studio).
+    REST API returns, accepts, and has the ability to store data.
+    REST API provides proper feedback (e.g. when requested data could not be found, supplied data is invalid).
+    Has instructions on how to run it.
