@@ -1,5 +1,5 @@
-﻿using FootballManager.Application.Players;
-using FootballManager.Application.Teams;
+﻿using FootballManager.Core.Players;
+using FootballManager.Core.Teams;
 using Microsoft.EntityFrameworkCore;
 
 namespace FootballManager.Application.Common.Interfaces;
