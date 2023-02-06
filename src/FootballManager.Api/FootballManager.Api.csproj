@@ -22,7 +22,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\FootballManager.Application\FootballManager.Application.csproj" />
-      <ProjectReference Include="..\FootballManager.Persist\FootballManager.Persist.csproj" />
+      <ProjectReference Include="..\FootballManager.Infrastructure\FootballManager.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
