@@ -31,11 +31,17 @@ public class ErrorController : ControllerBase
                     modelStateDictionary: responseException.Errors);
 
             case ArgumentException argumentException:
-                var dictionary = new ModelStateDictionary();
-                dictionary.AddModelError(argumentException.ParamName!, argumentException.Message);
+                var dictionary1 = new ModelStateDictionary();
+                dictionary1.AddModelError(argumentException.ParamName!, argumentException.Message);
                 return ValidationProblem(title: argumentException.Message,
-                    statusCode: (int)HttpStatusCode.BadRequest, modelStateDictionary: dictionary);
+                    statusCode: (int)HttpStatusCode.BadRequest, modelStateDictionary: dictionary1);
 
+            case NullReferenceException nullReferenceException:
+                var dictionary2 = new ModelStateDictionary();
+                dictionary2.AddModelError("Message", nullReferenceException.Message);
+                return ValidationProblem(title: nullReferenceException.Message,
+                    statusCode: (int)HttpStatusCode.BadRequest, modelStateDictionary: dictionary2);
+                
             case NotFoundException notFoundException:
                 return ValidationProblem(title: notFoundException.Message,
                     statusCode: (int?)HttpStatusCode.BadRequest);
