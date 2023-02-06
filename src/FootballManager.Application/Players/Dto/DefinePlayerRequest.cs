@@ -1,13 +1,4 @@
-﻿namespace FootballManager.Application.Players;
-
-public class PlayerSmallDto
-{
-    
-}
-public class PlayerDto
-{
-    
-}
+namespace FootballManager.Application.Players.Dto;
 
 public record DefinePlayerRequest
 {

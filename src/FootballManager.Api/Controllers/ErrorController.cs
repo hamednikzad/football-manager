@@ -7,17 +7,14 @@ using Serilog;
 
 namespace FootballManager.Api.Controllers;
 
+/// <summary>
+/// Dedicated for handle exceptions
+/// </summary>
 [ApiExplorerSettings(IgnoreApi = true)]
 [Route("")]
 public class ErrorController : ControllerBase
 {
-    private IActionResult HandleResponseException(ResponseException exception)
-    {
-        return ValidationProblem(modelStateDictionary: exception.Errors, title: exception.Message,
-            statusCode: (int?)exception.StatusCode);
-    }
-
-    private IActionResult ErrorLocalDevelopmentHandler(IWebHostEnvironment webHostEnvironment)
+    private IActionResult ErrorHandler()
     {
         var context = HttpContext.Features.Get<IExceptionHandlerFeature>();
         Log.Logger.Error(context!.Error, "Error controller:");
@@ -48,11 +45,16 @@ public class ErrorController : ControllerBase
         }
     }
     
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="webHostEnvironment"></param>
+    /// <returns></returns>
     [Route("error")]
     public IActionResult ErrorLocalDevelopment(
         [FromServices] IWebHostEnvironment webHostEnvironment)
     {
-        return ErrorLocalDevelopmentHandler(webHostEnvironment);
+        return ErrorHandler();
     }
     
 }
