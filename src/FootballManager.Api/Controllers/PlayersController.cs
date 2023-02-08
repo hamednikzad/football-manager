@@ -72,6 +72,20 @@ public class PlayersController : ControllerBase
     }
 
     /// <summary>
+    /// Update player's properties
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="ct"></param>
+    /// <returns></returns>
+    [HttpPut("")]
+    public async Task<ActionResult<int>> UpdatePlayer([FromBody] UpdatePlayerRequest player, CancellationToken ct)
+    {
+        await _playerService.UpdatePlayer(player, ct);
+
+        return Ok();
+    }
+
+    /// <summary>
     /// Add player to Team
     /// </summary>
     /// <param name="playerId"></param>
@@ -96,7 +110,7 @@ public class PlayersController : ControllerBase
     [HttpDelete("{playerId:int}/team/{teamId:int}")]
     public async Task<ActionResult<PlayerDto>> RemovePlayerToTeam(int playerId, int teamId, CancellationToken ct)
     {
-        await _playerService.RemovePlayerToTeam(playerId, teamId, ct);
+        await _playerService.RemovePlayerFromTeam(playerId, teamId, ct);
         
         return Ok();
     }

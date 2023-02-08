@@ -54,7 +54,7 @@ public class PlayerService : IPlayerService
         await _context.SaveChangesAsync(ct);
     }
 
-    public async ValueTask RemovePlayerToTeam(int playerId, int teamId, CancellationToken ct)
+    public async ValueTask RemovePlayerFromTeam(int playerId, int teamId, CancellationToken ct)
     {
         var player = await _context.Players.FirstOrDefaultAsync(t => t.Id == playerId, ct);
 
@@ -120,5 +120,24 @@ public class PlayerService : IPlayerService
         await _context.SaveChangesAsync(ct);
 
         return newPlayer.Id;
+    }
+
+    public async Task UpdatePlayer(UpdatePlayerRequest request, CancellationToken ct)
+    {
+        var player = await _context.Players.FirstOrDefaultAsync(t => t.Id == request.PlayerId, ct);
+
+        if (player is null)
+            throw new NotFoundException(nameof(request.PlayerId), request.PlayerId);
+        
+        if(!string.IsNullOrEmpty(request.FullName))
+            player.UpdateName(request.FullName);
+        
+        if(request.Age.HasValue)
+            player.UpdateAge(request.Age.Value);
+        
+        if(request.Number.HasValue)
+            player.UpdateNumber(request.Number.Value);
+
+        await _context.SaveChangesAsync(ct);
     }
 }

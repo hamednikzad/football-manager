@@ -14,6 +14,12 @@ public partial class Player
             throw new ArgumentOutOfRangeException(nameof(age), age, "Not valid Age for playing football");
     }
 
+    private static void ValidateHeight(int height)
+    {
+        if (height < 50)
+            throw new ArgumentOutOfRangeException(nameof(height), height, "Not valid Height for playing football");
+    }
+
     private static void ValidateNumber(int? number)
     {
         if(number is < 1)

@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballManager.Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballManager.Infrastructure", "src\FootballManager.Infrastructure\FootballManager.Infrastructure.csproj", "{CE54A947-1FD8-4FF1-A904-B96112FB8777}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballManager.Core.Tests", "test\FootballManager.Core.Tests\FootballManager.Core.Tests.csproj", "{33C07857-C2D3-436A-9C89-CE95EA01F328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballManager.Application.Tests", "test\FootballManager.Application.Tests\FootballManager.Application.Tests.csproj", "{54807400-A9B1-4332-B246-2C1A598245C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,11 +47,21 @@ Global
 		{CE54A947-1FD8-4FF1-A904-B96112FB8777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE54A947-1FD8-4FF1-A904-B96112FB8777}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE54A947-1FD8-4FF1-A904-B96112FB8777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C07857-C2D3-436A-9C89-CE95EA01F328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C07857-C2D3-436A-9C89-CE95EA01F328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C07857-C2D3-436A-9C89-CE95EA01F328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C07857-C2D3-436A-9C89-CE95EA01F328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54807400-A9B1-4332-B246-2C1A598245C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54807400-A9B1-4332-B246-2C1A598245C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54807400-A9B1-4332-B246-2C1A598245C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54807400-A9B1-4332-B246-2C1A598245C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BADFBB66-75C5-4D90-A7D3-4851F57E50EA} = {3DA3E018-78AA-4FFE-8E82-298E4B587408}
 		{7ACB208A-23E8-400F-AE49-653B12A1DB17} = {3DA3E018-78AA-4FFE-8E82-298E4B587408}
 		{64F12A85-E80F-4BA4-A4C0-A1E1A461B255} = {3DA3E018-78AA-4FFE-8E82-298E4B587408}
 		{CE54A947-1FD8-4FF1-A904-B96112FB8777} = {3DA3E018-78AA-4FFE-8E82-298E4B587408}
+		{33C07857-C2D3-436A-9C89-CE95EA01F328} = {3528B46A-BB42-41F4-A217-DF0868F9A1DF}
+		{54807400-A9B1-4332-B246-2C1A598245C3} = {3528B46A-BB42-41F4-A217-DF0868F9A1DF}
 	EndGlobalSection
 EndGlobal

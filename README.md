@@ -20,4 +20,4 @@ You can build docker file with this command:
 
 ## TODO
 - [ ] Http clients
-- [ ] Unit tests
+- [x] Unit tests

@@ -9,7 +9,7 @@ public partial class Player
     }
 
     public int Id { get; private set; }
-    public string FullName { get; private set; }
+    public string FullName { get; private set; } = null!;
     public int Age { get; private set; }
 
     /// <summary>
@@ -19,7 +19,7 @@ public partial class Player
 
     public int? Number { get; private set; }
     public FootType Foot { get; private set; }
-    public string Nationality { get; private set; }
+    public string Nationality { get; private set; } = null!;
     public DateTime? JoinedDate { get; private set; }
     public int? TeamId { get; set; }
     public Team? Team { get; set; }
@@ -29,6 +29,7 @@ public partial class Player
     {
         ValidateName(fullName);
         ValidateAge(age);
+        ValidateHeight(height);
         ValidateNumber(number);
 
         return new Player()

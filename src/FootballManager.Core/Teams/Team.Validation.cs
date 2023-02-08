@@ -2,9 +2,9 @@ namespace FootballManager.Core.Teams;
 
 public partial class Team
 {
-    private static void ValidateName(string fullName)
+    private static void ValidateName(string name)
     {
-        if (string.IsNullOrEmpty(fullName)) throw new ArgumentNullException(nameof(fullName));
+        if (string.IsNullOrEmpty(name)) throw new ArgumentNullException(nameof(name));
         
     }
 
