@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["FootballManager.Api/FootballManager.Api.csproj", "FootballManager.Api/"]
-RUN dotnet restore "FootballManager.Api\FootballManager.Api.csproj"
+COPY ["src/FootballManager.Api/FootballManager.Api.csproj", "src/FootballManager.Api/"]
+RUN dotnet restore "src/FootballManager.Api/FootballManager.Api.csproj"
 COPY . .
-WORKDIR "/src/FootballManager.Api"
+WORKDIR "/src/src/FootballManager.Api"
 RUN dotnet build "FootballManager.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish

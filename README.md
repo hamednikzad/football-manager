@@ -9,11 +9,12 @@ You can run Api with this command:
 `dotnet run -p .\src\FootballManager.Api\FootballManager.Api.csproj `
 
 ## Features
-- [x] Run: http://localhost:5000
-- [x] Swagger: http://localhost:5000/swagger/index.html
+- [x] Api:&emsp;&emsp;&emsp;&emsp;&ensp; http://localhost:5000
+- [x] Swagger:&emsp;&emsp; http://localhost:5000/swagger/index.html
 - [x] Health Check: http://localhost:5000/health
 
 ## Docker
-You can build docker file with this command:
+You can build docker file and run with this commands:
 
-`docker build --tag football-manager .`
+Build:`docker build --tag football-manager .`<br />
+Run:&nbsp;`docker run -p 5000:5000 football-manager`
