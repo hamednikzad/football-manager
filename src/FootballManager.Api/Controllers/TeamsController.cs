@@ -87,12 +87,13 @@ public class TeamsController : ControllerBase
     /// <param name="ct"></param>
     /// <returns></returns>
     [HttpGet("name/{name}/players")]
+    
     public async Task<ActionResult<List<PlayerSmallDto>>> GetTeamPlayers(string name, CancellationToken ct)
     {
         var players = await _teamService.GetTeamPlayers(name, ct);
         
         return Ok(players);
     }
-    
+
     #endregion
 }

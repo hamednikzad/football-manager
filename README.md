@@ -17,7 +17,3 @@ You can run Api with this command:
 You can build docker file with this command:
 
 `docker build --tag football-manager .`
-
-## TODO
-- [ ] Http clients
-- [x] Unit tests

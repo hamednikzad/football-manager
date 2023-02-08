@@ -58,13 +58,13 @@ public class PlayersController : ControllerBase
     #region Commands
 
     /// <summary>
-    /// Create player
+    /// Define new player
     /// </summary>
     /// <param name="player"></param>
     /// <param name="ct"></param>
     /// <returns></returns>
     [HttpPost("")]
-    public async Task<ActionResult<int>> CreatePlayer([FromBody] DefinePlayerRequest player, CancellationToken ct)
+    public async Task<ActionResult<int>> DefineNewPlayer([FromBody] DefinePlayerRequest player, CancellationToken ct)
     {
         var playerId = await _playerService.DefineNewPlayer(player, ct);
 

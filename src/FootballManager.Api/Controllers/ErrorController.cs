@@ -25,11 +25,6 @@ public class ErrorController : ControllerBase
     {
         switch (exception)
         {
-            case ResponseException responseException:
-                return ValidationProblem(title: exception.Message,
-                    statusCode: (int?)responseException.StatusCode,
-                    modelStateDictionary: responseException.Errors);
-
             case ArgumentException argumentException:
                 var dictionary1 = new ModelStateDictionary();
                 dictionary1.AddModelError(argumentException.ParamName!, argumentException.Message);
